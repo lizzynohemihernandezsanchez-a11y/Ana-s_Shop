@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ana's Shop - Moda con Estilo</title>
+  <link rel="stylesheet" href="estilo.css" />
+</head>
+<body>
+  <header>
+    <div class="logo">
+  <img src="img11.jfif" width="70" height="70" />
+   <span class="logo-text">Ana's Shop</span>
+</div>
+    <div class="menu-icon" onclick="toggleMenu()">☰</div>
+    <nav id="main-nav">
+      <a href="#">Inicio</a>
+      <a href="#">Mujer</a>
+      <a href="#">Hombre</a>
+      <a href="#">Accesorios</a>
+      <a href="#">Ofertas</a>
+      <span class="cart-icon" onclick="toggleCart()">🛒 <span id="cart-count">0</span></span>
+    </nav>
+    <div id="mobile-menu" class="mobile-nav">
+      <a href="#">Inicio</a>
+      <a href="#">Mujer</a>
+      <a href="#">Hombre</a>
+      <a href="#">Accesorios</a>
+      <a href="#">Ofertas</a>
+    </div>
+  </header>
+
+  <section class="hero">
+    <h1>Viste con estilo en Ana's Shop</h1>
+    <p>Ropa moderna para cada ocasión</p>
+    <div class="search-box">
+      <input type="text" placeholder="¿Qué buscas?" />
+      <select>
+        <option value="">Categoría</option>
+        <option value="mujer">Mujer</option>
+        <option value="hombre">Hombre</option>
+        <option value="accesorios">Accesorios</option>
+      </select>
+      <button>Buscar</button>
+    </div>
+  </section>
+
+  <!-- ✅ Productos organizados correctamente -->
+<section class="products">
+  <div class="product-card">
+    <img src="im1.jpg" alt="falda" />
+    <div class="info">
+      <h3>Falda</h3>
+      <p>L245.00</p>
+      <button onclick="addToCart('falada', 45)">Agregar al carrito</button>
+    </div>
+  </div>
+
+  <div class="product-card">
+    <img src="im2.jpg" alt="Camisa Hombre" />
+    <div class="info">
+      <h3>Camisa Hombre</h3>
+      <p>L230.00</p>
+      <button onclick="addToCart('Camisa Hombre', 30)">Agregar al carrito</button>
+    </div>
+  </div>
+
+  <div class="product-card">
+    <img src="im3.jpg" alt="Bolso Elegante" />
+    <div class="info">
+      <h3>Bolso Elegante</h3>
+      <p>L300.00</p>
+      <button onclick="addToCart('Bolso Elegante', 60)">Agregar al carrito</button>
+    </div>
+  </div>
+ <div class="card-container">
+  <div class="product-card">
+    <img src="imagen4.jpg" alt="Zapatos Casual" />
+    <div class="info">
+      <h3>Zapatos Casual</h3>
+      <p>L1000.00</p>
+      <button onclick="addToCart('Zapatos Casual', 55)">Agregar al carrito</button>
+    </div>
+  </div>
+   </div>
+
+  <div class="product-card">
+    <img src="im4.jpg" alt="Blusa Blanca" />
+    <div class="info">
+      <h3>Blusa Blanca</h3>
+      <p>L250.00</p>
+      <button onclick="addToCart('Blusa Blanca', 28)">Agregar al carrito</button>
+    </div>
+  </div>
+
+  <div class="product-card">
+    <img src="im5.jpg" alt="Jeans Rotos" />
+    <div class="info">
+      <h3>Jeans Rotos</h3>
+      <p>L300.00</p>
+      <button onclick="addToCart('Jeans Rotos', 40)">Agregar al carrito</button>
+    </div>
+  </div>
+   <div class="card-container">
+  <div class="product-card">
+    <img src="im6.jpg" alt="short" />
+    <div class="info">
+      <h3>Shorts</h3>
+      <p>L355.00</p>
+      <button onclick="addToCart('ahort', 55)">Agregar al carrito</button>
+    </div>
+  </div>
+   </div>
+    <div class="product-card">
+    <img src="im7.jpg" alt="camisa deportiva" />
+    <div class="info">
+      <h3>Camisa deportiva</h3>
+      <p>L340.00</p>
+      <button onclick="addToCart('camisa deportiva', 40)">Agregar al carrito</button>
+    </div>
+  </div>
+   <div class="product-card">
+    <img src="im8.jpg" alt="tenis" />
+    <div class="info">
+      <h3>Tenis</h3>
+      <p>L440.00</p>
+      <button onclick="addToCart('tenis', 40)">Agregar al carrito</button>
+    </div>
+  </div>
+
+  </section>
+</section>
+</section>
+<footer class="footer">
+<div class="footer-container">
+  <div class="footer-section">
+    <h3>ANA'S SHOP</h3>
+    <p>SOMOS UNA EMPRESA DEDICADA AL ESTILO PERSONAL</p>
+  </div>
+  <div class="footer-section">
+    <h4>Enlaces</h4>
+    <ul>
+      <li><a href="#">Inicio</a></li>
+      <li><a href="#">Servicios</a></li>
+      <li><a href="#">Contacto</a></li>
+    </ul>
+  </div>
+</div>
+
+  <div class="footer-section">
+    <h4>Contacto</h4>
+    <P>Email: ANA'SHOP@gmail.com</P>
+    <p>Cel: +504 97930260</p>
+  </div>
+  
+
+
+
+  <!-- Mini Carrito -->
+  <div id="cart-modal" class="cart-modal">
+    <h3>Tu carrito</h3>
+    <ul id="cart-items"></ul>
+    <p>Total: $<span id="cart-total">0</span></p>
+    <button onclick="clearCart()">Vaciar carrito</button>
+  </div>
+  <script src="script.js"></script>
+  <br>
+<br>
+<br>
+
+  <footer>
+    <br>
+  
+    &copy; 2025 Ana's Shop. Todos los derechos reservados.
+  </footer>
+
+  <!-- ✅ Asegúrate que este archivo exista -->
+  <script src="im9.jfif"></script>
+  <!-- Ventana del carrito -->
+<div id="cart-modal" class="cart-modal">
+  <h3>Tu carrito</h3>
+  <ul id="cart-items"></ul>
+  <p>Total: $<span id="cart-total">0.00</span></p>
+  <button onclick="clearCart()" class="clear-btn">Vaciar carrito</button>
+</div>
+
+<script src="script.js"></script>
+
+    </div>
+  </div>
+</section>
+</body>
+</html>
+</body>
+</html>
