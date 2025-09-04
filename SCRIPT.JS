@@ -58,4 +58,6 @@ function saveCart() {
 
 window.onload = () => {
   updateCartUI();
+
+
 }
